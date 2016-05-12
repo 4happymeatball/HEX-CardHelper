@@ -8,7 +8,7 @@ public class Card {
     private String camp;
     private String card_no;
     private String color;
-    private String cost;
+    private int cost;
     private int defense;
     private String desc;
     private boolean is_unique;
@@ -23,7 +23,7 @@ public class Card {
     public Card() {
     }
 
-    public Card(String ability, String camp, String card_no, String color, String cost,
+    public Card(String ability, String camp, String card_no, String color, int cost,
                 int defense, String desc, boolean is_unique, String name, String name_en,
                 String rarity, String requirement, String subtype, String type, int power) {
         this.ability = ability;
@@ -75,11 +75,11 @@ public class Card {
         this.color = color;
     }
 
-    public String getCost() {
+    public int getCost() {
         return cost;
     }
 
-    public void setCost(String cost) {
+    public void setCost(int cost) {
         this.cost = cost;
     }
 
@@ -170,7 +170,7 @@ public class Card {
                 ", camp='" + camp + '\'' +
                 ", card_no='" + card_no + '\'' +
                 ", color='" + color + '\'' +
-                ", cost='" + cost + '\'' +
+                ", cost=" + cost +
                 ", defense=" + defense +
                 ", desc='" + desc + '\'' +
                 ", is_unique=" + is_unique +
