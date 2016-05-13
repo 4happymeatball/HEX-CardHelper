@@ -1,7 +1,8 @@
 package net.spinel.hexcards.models;
 
 /**
- * Created by Spinel on 16/5/12.
+ * Created by Spinel on 16/5/12 下午6:22.
+ * Card Model
  */
 public class Card {
     private String card_no;
@@ -17,7 +18,7 @@ public class Card {
     private String subtype;
     private String rarity;
     private String camp;
-    private String ability;
+    private String rule;
     private String description;
     private String img_url;
 
@@ -26,7 +27,7 @@ public class Card {
 
     public Card(String card_no, String color, String name, String name_en, int cost,
                 String requirement, int power, int defense, boolean is_unique, String type,
-                String subtype, String rarity, String camp, String ability, String description,
+                String subtype, String rarity, String camp, String rule, String description,
                 String img_url) {
         this.card_no = card_no;
         this.color = color;
@@ -41,7 +42,7 @@ public class Card {
         this.subtype = subtype;
         this.rarity = rarity;
         this.camp = camp;
-        this.ability = ability;
+        this.rule = rule;
         this.description = description;
         this.img_url = img_url;
     }
@@ -150,12 +151,12 @@ public class Card {
         this.camp = camp;
     }
 
-    public String getAbility() {
-        return ability;
+    public String getRule() {
+        return rule;
     }
 
-    public void setAbility(String ability) {
-        this.ability = ability;
+    public void setRule(String rule) {
+        this.rule = rule;
     }
 
     public String getDescription() {
@@ -190,7 +191,7 @@ public class Card {
                 ", subtype='" + subtype + '\'' +
                 ", rarity='" + rarity + '\'' +
                 ", camp='" + camp + '\'' +
-                ", ability='" + ability + '\'' +
+                ", rule='" + rule + '\'' +
                 ", description='" + description + '\'' +
                 ", img_url='" + img_url + '\'' +
                 '}';
