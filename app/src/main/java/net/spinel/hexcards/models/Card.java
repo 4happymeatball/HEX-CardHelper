@@ -5,7 +5,8 @@ package net.spinel.hexcards.models;
  * Card Model
  */
 public class Card {
-    private String card_no;
+    private String version;
+    private int card_no;
     private String color;
     private String name;
     private String name_en;
@@ -26,10 +27,10 @@ public class Card {
     public Card() {
     }
 
-    public Card(String card_no, String color, String name, String name_en, int cost,
+    public Card(String version, int card_no, String color, String name, String name_en, int cost,
                 String requirement, int power, int defense, boolean is_unique, String type,
-                String subtype, String rarity, String camp, String rule, String description,
-                String img_url) {
+                String subtype, String rarity, String camp, String rule, String description, String img_url) {
+        this.version = version;
         this.card_no = card_no;
         this.color = color;
         this.name = name;
@@ -48,11 +49,19 @@ public class Card {
         this.img_url = img_url;
     }
 
-    public String getCard_no() {
+    public String getVersion() {
+        return version;
+    }
+
+    public void setVersion(String version) {
+        this.version = version;
+    }
+
+    public int getCard_no() {
         return card_no;
     }
 
-    public void setCard_no(String card_no) {
+    public void setCard_no(int card_no) {
         this.card_no = card_no;
     }
 
@@ -179,7 +188,8 @@ public class Card {
     @Override
     public String toString() {
         return "Card{" +
-                "card_no='" + card_no + '\'' +
+                "version='" + version + '\'' +
+                ", card_no=" + card_no +
                 ", color='" + color + '\'' +
                 ", name='" + name + '\'' +
                 ", name_en='" + name_en + '\'' +
