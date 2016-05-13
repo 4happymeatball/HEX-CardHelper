@@ -20,6 +20,7 @@ public class Card {
     private String camp;
     private String rule;
     private String description;
+    // perfix as "http://query.hex.wanmei.com/upload/cardOriImgFile/"
     private String img_url;
 
     public Card() {
