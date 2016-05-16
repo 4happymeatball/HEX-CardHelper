@@ -1,6 +1,7 @@
 package net.spinel.hexcards;
 
 import android.app.Application;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
@@ -9,6 +10,8 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 
+import net.spinel.hexcards.utils.DBManager;
+
 /**
  * Created by Spinel on 16/5/11.
  */
@@ -16,6 +19,15 @@ public class HEXApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+
+        if (!isDBExist()) {
+            DBManager manager = new DBManager(this);
+            manager.openDatabase();
+            manager.closeDatabase();
+            SharedPreferences.Editor editor = getSharedPreferences("info", MODE_PRIVATE).edit();
+            editor.putBoolean("db_exist", true);
+            editor.apply();
+        }
 
         DisplayImageOptions.Builder options = new DisplayImageOptions.Builder();
         options.showImageOnFail(R.mipmap.ic_launcher);
@@ -33,5 +45,10 @@ public class HEXApplication extends Application {
         config.defaultDisplayImageOptions(options.build());
 
         ImageLoader.getInstance().init(config.build());
+    }
+
+    private boolean isDBExist() {
+        SharedPreferences sp = getSharedPreferences("info", MODE_PRIVATE);
+        return sp.getBoolean("db_exist", false);
     }
 }
