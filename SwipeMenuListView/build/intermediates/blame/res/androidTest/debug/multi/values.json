@@ -1,0 +1,362 @@
+[
+    {
+        "outputFile": "/Users/yangzonghao/Develop/HEXCards/SwipeMenuListView/build/intermediates/res/merged/androidTest/debug/values/values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 303,
+                    "endColumn": 54,
+                    "endOffset": 353
+                },
+                "from": {
+                    "file": "/Users/yangzonghao/Develop/HEXCards/SwipeMenuListView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 303,
+                        "endColumn": 54,
+                        "endOffset": 353
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 358,
+                    "endColumn": 61,
+                    "endOffset": 415
+                },
+                "from": {
+                    "file": "/Users/yangzonghao/Develop/HEXCards/SwipeMenuListView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 358,
+                        "endColumn": 61,
+                        "endOffset": 415
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 420,
+                    "endColumn": 62,
+                    "endOffset": 478
+                },
+                "from": {
+                    "file": "/Users/yangzonghao/Develop/HEXCards/SwipeMenuListView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 420,
+                        "endColumn": 62,
+                        "endOffset": 478
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 483,
+                    "endColumn": 65,
+                    "endOffset": 544
+                },
+                "from": {
+                    "file": "/Users/yangzonghao/Develop/HEXCards/SwipeMenuListView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 483,
+                        "endColumn": 65,
+                        "endOffset": 544
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 549,
+                    "endColumn": 61,
+                    "endOffset": 606
+                },
+                "from": {
+                    "file": "/Users/yangzonghao/Develop/HEXCards/SwipeMenuListView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 549,
+                        "endColumn": 61,
+                        "endOffset": 606
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 611,
+                    "endColumn": 62,
+                    "endOffset": 669
+                },
+                "from": {
+                    "file": "/Users/yangzonghao/Develop/HEXCards/SwipeMenuListView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 611,
+                        "endColumn": 62,
+                        "endOffset": 669
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 674,
+                    "endColumn": 62,
+                    "endOffset": 732
+                },
+                "from": {
+                    "file": "/Users/yangzonghao/Develop/HEXCards/SwipeMenuListView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 674,
+                        "endColumn": 62,
+                        "endOffset": 732
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 737,
+                    "endLine": 16,
+                    "endColumn": 12,
+                    "endOffset": 1023
+                },
+                "from": {
+                    "file": "/Users/yangzonghao/Develop/HEXCards/SwipeMenuListView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 737,
+                        "endLine": 16,
+                        "endColumn": 12,
+                        "endOffset": 1023
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 1028,
+                    "endLine": 19,
+                    "endColumn": 12,
+                    "endOffset": 1183
+                },
+                "from": {
+                    "file": "/Users/yangzonghao/Develop/HEXCards/SwipeMenuListView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 1028,
+                        "endLine": 19,
+                        "endColumn": 12,
+                        "endOffset": 1183
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "/Users/yangzonghao/Develop/workspace/mcc/SwipeMenuListView/build/intermediates/res/merged/androidTest/debug/values/values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 303,
+                    "endColumn": 54,
+                    "endOffset": 353
+                },
+                "from": {
+                    "file": "/Users/yangzonghao/Develop/workspace/mcc/SwipeMenuListView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 303,
+                        "endColumn": 54,
+                        "endOffset": 353
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 358,
+                    "endColumn": 61,
+                    "endOffset": 415
+                },
+                "from": {
+                    "file": "/Users/yangzonghao/Develop/workspace/mcc/SwipeMenuListView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 358,
+                        "endColumn": 61,
+                        "endOffset": 415
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 420,
+                    "endColumn": 62,
+                    "endOffset": 478
+                },
+                "from": {
+                    "file": "/Users/yangzonghao/Develop/workspace/mcc/SwipeMenuListView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 420,
+                        "endColumn": 62,
+                        "endOffset": 478
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 483,
+                    "endColumn": 65,
+                    "endOffset": 544
+                },
+                "from": {
+                    "file": "/Users/yangzonghao/Develop/workspace/mcc/SwipeMenuListView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 483,
+                        "endColumn": 65,
+                        "endOffset": 544
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 549,
+                    "endColumn": 61,
+                    "endOffset": 606
+                },
+                "from": {
+                    "file": "/Users/yangzonghao/Develop/workspace/mcc/SwipeMenuListView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 549,
+                        "endColumn": 61,
+                        "endOffset": 606
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 611,
+                    "endColumn": 62,
+                    "endOffset": 669
+                },
+                "from": {
+                    "file": "/Users/yangzonghao/Develop/workspace/mcc/SwipeMenuListView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 611,
+                        "endColumn": 62,
+                        "endOffset": 669
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 674,
+                    "endColumn": 62,
+                    "endOffset": 732
+                },
+                "from": {
+                    "file": "/Users/yangzonghao/Develop/workspace/mcc/SwipeMenuListView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 674,
+                        "endColumn": 62,
+                        "endOffset": 732
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 737,
+                    "endLine": 16,
+                    "endColumn": 12,
+                    "endOffset": 1023
+                },
+                "from": {
+                    "file": "/Users/yangzonghao/Develop/workspace/mcc/SwipeMenuListView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 737,
+                        "endLine": 16,
+                        "endColumn": 12,
+                        "endOffset": 1023
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 1028,
+                    "endLine": 19,
+                    "endColumn": 12,
+                    "endOffset": 1183
+                },
+                "from": {
+                    "file": "/Users/yangzonghao/Develop/workspace/mcc/SwipeMenuListView/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 1028,
+                        "endLine": 19,
+                        "endColumn": 12,
+                        "endOffset": 1183
+                    }
+                }
+            }
+        ]
+    }
+]

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/Users/yangzonghao/Develop/HEXCards/SwipeMenuListView/assets"/><source path="/Users/yangzonghao/Develop/HEXCards/SwipeMenuListView/build/generated/assets/shaders/release"/></dataSet><dataSet config="release"><source path="/Users/yangzonghao/Develop/HEXCards/SwipeMenuListView/build-types/release/assets"/></dataSet></merger>

@@ -29,24 +29,12 @@ public class DBHelper {
         database = SQLiteDatabase.openOrCreateDatabase(DBManager.DB_PATH + "/" + DBManager.DB_NAME, null);
     }
 
-    public List<Card> query(String[]... args) {
-
-        String table = "table_cardlist";
-        StringBuilder selection = new StringBuilder();
-        String[] selectionArgs = new String[args.length];
-        for (int i = 0; i < args.length; i++) {
-            selection.append(args[i][0]);
-            selectionArgs[i] = args[i][1];
-        }
-        return queryCards(table, selection.toString(), selectionArgs);
-    }
-
-    private List<Card> queryCards(String table, String selection, String[] selectionArgs) {
+    public List<Card> queryCards(String rawQueryString) {
         if (database == null) {
             openDatabaseConnection();
         }
 
-        Cursor cursor = database.query(table, null, selection, selectionArgs, null, null, null);
+        Cursor cursor = database.rawQuery(rawQueryString, null);
         if (cursor != null && cursor.getCount() != 0) {
             cursor.moveToFirst();
             List<Card> results = new ArrayList<>();
