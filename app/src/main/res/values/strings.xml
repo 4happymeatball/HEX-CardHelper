@@ -34,4 +34,9 @@
     <string name="action">战术</string>
     <string name="quick">快速</string>
     <string name="sub_type">可在此输入副类别</string>
+    <string name="cost_format">费用：%1s</string>
+    <string name="token">衍生物</string>
+    <string name="alpha">第一版</string>
+    <string name="beta">第二版</string>
+    <string name="count">共查找到%1d张相关卡片</string>
 </resources>

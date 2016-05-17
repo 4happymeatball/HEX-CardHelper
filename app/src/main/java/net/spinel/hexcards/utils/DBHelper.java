@@ -2,6 +2,7 @@ package net.spinel.hexcards.utils;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import net.spinel.hexcards.models.Card;
 
@@ -27,6 +28,21 @@ public class DBHelper {
 
     private void openDatabaseConnection() {
         database = SQLiteDatabase.openOrCreateDatabase(DBManager.DB_PATH + "/" + DBManager.DB_NAME, null);
+    }
+
+    public int queryCount(String rawQueryString) {
+        if (database == null) {
+            openDatabaseConnection();
+        }
+
+        Cursor cursor = database.rawQuery(rawQueryString.replace("*", "count(*)"), null);
+        int count = 0;
+        if (cursor != null) {
+            cursor.moveToFirst();
+            count = cursor.getInt(0);
+            cursor.close();
+        }
+        return count;
     }
 
     public List<Card> queryCards(String rawQueryString) {

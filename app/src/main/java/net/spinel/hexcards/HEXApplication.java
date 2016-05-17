@@ -9,6 +9,7 @@ import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
+import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
 
 import net.spinel.hexcards.utils.DBManager;
 
@@ -30,11 +31,10 @@ public class HEXApplication extends Application {
         }
 
         DisplayImageOptions.Builder options = new DisplayImageOptions.Builder();
-        options.showImageOnFail(R.mipmap.ic_launcher);
+        options.showImageOnFail(R.drawable.no_pic);
         options.cacheInMemory(true);
         options.cacheOnDisk(true);
         options.considerExifParams(true);
-        options.bitmapConfig(Bitmap.Config.RGB_565);
 
         ImageLoaderConfiguration.Builder config = new ImageLoaderConfiguration.Builder(this);
         config.threadPriority(Thread.NORM_PRIORITY - 2);

@@ -9,25 +9,24 @@ import android.widget.EditText;
 
 import net.spinel.hexcards.R;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private EditText etCardName, etCardRule, etSubType;
-    private CheckBox[] cbRarity = new CheckBox[5], cbType = new CheckBox[6],
+    private CheckBox[] cbRarity = new CheckBox[6], cbType = new CheckBox[6],
             cbColor = new CheckBox[6], cbCost = new CheckBox[8];
 
     private int[] id = new int[]{R.id.cb_common, R.id.cb_uncommon, R.id.cb_rare, R.id.cb_mythic_rare,
-            R.id.cb_another_art, R.id.cb_resource, R.id.cb_troop, R.id.cb_artifact, R.id.cb_constant,
-            R.id.cb_action, R.id.cb_quick, R.id.cb_non_color, R.id.cb_white_color,
+            R.id.cb_another_art, R.id.cb_token, R.id.cb_resource, R.id.cb_troop, R.id.cb_artifact,
+            R.id.cb_constant, R.id.cb_action, R.id.cb_quick, R.id.cb_non_color, R.id.cb_white_color,
             R.id.cb_blue_color, R.id.cb_black_color, R.id.cb_red_color, R.id.cb_green_color,
             R.id.cb_cost_0, R.id.cb_cost_1, R.id.cb_cost_2, R.id.cb_cost_3, R.id.cb_cost_4,
             R.id.cb_cost_5, R.id.cb_cost_6, R.id.cb_cost_7_and_more};
 
     private String[] arg = new String[]{"rarity = 'C'", "rarity = 'UC'", "rarity = 'R'", "rarity = 'MR'",
-            "rarity = 'AA'", "type LIKE '%资源%'", "type LIKE '%部队%'", "type LIKE '%造物%'", "type LIKE '%恒久物%'",
-            "type LIKE '%战术%'", "type LIKE '%快速%'", "color = ''", "color LIKE '%W%'",
+            "rarity = 'AA'", "rarity = 'TOKEN'", "type LIKE '%资源%'", "type LIKE '%部队%'", "type LIKE '%造物%'",
+            "type LIKE '%恒久物%'", "type LIKE '%战术%'", "type LIKE '%快速%'", "color = ''", "color LIKE '%W%'",
             "color LIKE '%U%'", "color LIKE '%B%'", "color LIKE '%R%'", "color LIKE '%G%'",
             "cost = 0", "cost = 1", "cost = 2", "cost = 3", "cost = 4", "cost = 5", "cost = 6", "cost >= 7"};
 
@@ -70,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         //rarity
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 6; i++) {
             if (cbRarity[i].isChecked()) {
                 temp.add(i);
             }
@@ -80,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         //type
         for (int i = 0; i < 6; i++) {
             if (cbType[i].isChecked()) {
-                temp.add(i + 5);
+                temp.add(i + 6);
             }
         }
         constructString(builder, temp);
@@ -88,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
         //color
         for (int i = 0; i < 6; i++) {
             if (cbColor[i].isChecked()) {
-                temp.add(i + 11);
+                temp.add(i + 12);
             }
         }
         constructString(builder, temp);
@@ -96,10 +95,11 @@ public class MainActivity extends AppCompatActivity {
         //cost
         for (int i = 0; i < 8; i++) {
             if (cbCost[i].isChecked()) {
-                temp.add(i + 17);
+                temp.add(i + 18);
             }
         }
         constructString(builder, temp);
+
         return builder.toString();
     }
 
@@ -123,14 +123,12 @@ public class MainActivity extends AppCompatActivity {
         etSubType = (EditText) this.findViewById(R.id.et_subtype);
 
         for (int i = 0; i < 8; i++) {
-            if (i < 5) {
-                cbRarity[i] = (CheckBox) this.findViewById(id[i]);
-            }
             if (i < 6) {
-                cbType[i] = (CheckBox) this.findViewById(id[i + 5]);
-                cbColor[i] = (CheckBox) this.findViewById(id[i + 11]);
+                cbRarity[i] = (CheckBox) this.findViewById(id[i]);
+                cbType[i] = (CheckBox) this.findViewById(id[i + 6]);
+                cbColor[i] = (CheckBox) this.findViewById(id[i + 12]);
             }
-            cbCost[i] = (CheckBox) this.findViewById(id[i + 17]);
+            cbCost[i] = (CheckBox) this.findViewById(id[i + 18]);
         }
     }
 
