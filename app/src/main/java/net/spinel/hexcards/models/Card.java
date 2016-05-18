@@ -6,7 +6,8 @@ import java.io.Serializable;
  * Created by Spinel on 16/5/12 下午6:22.
  * Card Model
  */
-public class Card implements Serializable{
+public class Card implements Serializable {
+    private int id;
     private String version;
     private int card_no;
     private String color;
@@ -29,9 +30,10 @@ public class Card implements Serializable{
     public Card() {
     }
 
-    public Card(String version, int card_no, String color, String name, String name_en, int cost,
+    public Card(int id, String version, int card_no, String color, String name, String name_en, int cost,
                 String requirement, int power, int defense, boolean is_unique, String type,
                 String subtype, String rarity, String camp, String rule, String description, String img_url) {
+        this.id = id;
         this.version = version;
         this.card_no = card_no;
         this.color = color;
@@ -49,6 +51,14 @@ public class Card implements Serializable{
         this.rule = rule;
         this.description = description;
         this.img_url = img_url;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getVersion() {
@@ -190,7 +200,8 @@ public class Card implements Serializable{
     @Override
     public String toString() {
         return "Card{" +
-                "version='" + version + '\'' +
+                "id=" + id +
+                ", version='" + version + '\'' +
                 ", card_no=" + card_no +
                 ", color='" + color + '\'' +
                 ", name='" + name + '\'' +

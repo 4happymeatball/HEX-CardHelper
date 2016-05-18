@@ -19,11 +19,17 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".activities.CardQueryActivity"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".activities.CardDisplayActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".activities.CardListActivity"
             android:screenOrientation="portrait" />
+        <activity android:name=".activities.DeckListActivity" />
+        <activity android:name=".activities.DeckBuildActivity" />
+        <activity android:name=".activities.SettingActivity"></activity>
     </application>
 
 </manifest>

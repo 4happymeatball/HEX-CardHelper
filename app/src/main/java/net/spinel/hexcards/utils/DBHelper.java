@@ -2,7 +2,6 @@ package net.spinel.hexcards.utils;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.util.Log;
 
 import net.spinel.hexcards.models.Card;
 
@@ -57,6 +56,7 @@ public class DBHelper {
             if (cursor.moveToFirst()) {
                 do {
                     Card card = new Card(
+                            cursor.getInt(cursor.getColumnIndex("id")),
                             cursor.getString(cursor.getColumnIndex("version")),
                             cursor.getInt(cursor.getColumnIndex("card_no")),
                             cursor.getString(cursor.getColumnIndex("color")),
