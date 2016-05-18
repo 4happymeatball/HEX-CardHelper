@@ -18,9 +18,9 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="105dp"
-        android:layout_marginTop="3dp"
         android:layout_marginLeft="3dp"
-        android:layout_marginStart="3dp">
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="3dp">
 
         <TextView
             android:id="@+id/tv_card_name"
@@ -84,9 +84,9 @@
             android:layout_height="match_parent"
             android:layout_below="@+id/tv_type"
             android:layout_marginTop="5dp"
-            android:textSize="12sp"
+            android:ellipsize="end"
             android:maxLines="2"
-            android:ellipsize="end"/>
+            android:textSize="12sp" />
 
         <TextView
             android:id="@+id/tv_cost"
@@ -97,6 +97,17 @@
             android:layout_below="@+id/view_seaprate"
             android:singleLine="true"
             android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_unique"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tv_rarity"
+            android:layout_marginTop="4dp"
+            android:singleLine="true"
+            android:textSize="10sp" />
 
         <TextView
             android:id="@+id/tv_requirement"

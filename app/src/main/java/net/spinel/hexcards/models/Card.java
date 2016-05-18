@@ -1,10 +1,12 @@
 package net.spinel.hexcards.models;
 
+import java.io.Serializable;
+
 /**
  * Created by Spinel on 16/5/12 下午6:22.
  * Card Model
  */
-public class Card {
+public class Card implements Serializable{
     private String version;
     private int card_no;
     private String color;

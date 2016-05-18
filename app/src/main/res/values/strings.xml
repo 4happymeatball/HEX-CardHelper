@@ -38,5 +38,8 @@
     <string name="token">衍生物</string>
     <string name="alpha">第一版</string>
     <string name="beta">第二版</string>
+    <string name="version">%1$s(%2$d&#160;/&#160;%3$d)</string>
     <string name="count">共查找到%1d张相关卡片</string>
+    <string name="unique">唯一</string>
+    <string name="pow_def">力量%1$d&#160;/&#160;防御%2$d</string>
 </resources>

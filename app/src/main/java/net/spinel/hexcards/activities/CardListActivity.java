@@ -1,9 +1,12 @@
 package net.spinel.hexcards.activities;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -94,6 +97,14 @@ public class CardListActivity extends AppCompatActivity {
             @Override
             public void onMenuItemClick(int position, SwipeMenu menu, int index) {
                 Toast.makeText(CardListActivity.this, index + "", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Card card = mAdapter.getItem(i - 1);
+                startActivity(new Intent(CardListActivity.this, CardDisplayActivity.class).putExtra("card", card));
             }
         });
 

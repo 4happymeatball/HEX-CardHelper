@@ -132,12 +132,6 @@
                 android:orientation="horizontal">
 
                 <CheckBox
-                    android:id="@+id/cb_non_color"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/non_color" />
-
-                <CheckBox
                     android:id="@+id/cb_white_color"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -167,6 +161,12 @@
                     android:layout_height="wrap_content"
                     android:text="@string/green_color" />
             </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/cb_non_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/non_color" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -207,13 +207,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/another_art" />
-
-                <CheckBox
-                    android:id="@+id/cb_token"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/token" />
             </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/cb_token"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/token" />
 
             <TextView
                 android:layout_width="match_parent"

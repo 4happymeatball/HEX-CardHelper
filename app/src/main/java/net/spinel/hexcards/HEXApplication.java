@@ -2,14 +2,12 @@ package net.spinel.hexcards;
 
 import android.app.Application;
 import android.content.SharedPreferences;
-import android.graphics.Bitmap;
 
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
-import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
 
 import net.spinel.hexcards.utils.DBManager;
 
@@ -17,6 +15,9 @@ import net.spinel.hexcards.utils.DBManager;
  * Created by Spinel on 16/5/11.
  */
 public class HEXApplication extends Application {
+    public static final int ALPHA_COUNT = 394;
+    public static final int BETA_COUNT = 295;
+
     @Override
     public void onCreate() {
         super.onCreate();

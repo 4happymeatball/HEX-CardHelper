@@ -63,6 +63,7 @@ public class CardListAdapter extends BaseAdapter {
             mHolder.tvRule = (TextView) convertView.findViewById(R.id.tv_rule);
             mHolder.tvRequirement = (TextView) convertView.findViewById(R.id.tv_requirement);
             mHolder.tvCost = (TextView) convertView.findViewById(R.id.tv_cost);
+            mHolder.tvUnique = (TextView) convertView.findViewById(R.id.tv_unique);
             mHolder.ivPic = (ImageView) convertView.findViewById(R.id.iv_pic);
             mHolder.ivRarity = (ImageView) convertView.findViewById(R.id.iv_rarity);
             convertView.setTag(mHolder);
@@ -127,11 +128,16 @@ public class CardListAdapter extends BaseAdapter {
         //cost
         String cost = String.format(mContext.getString(R.string.cost_format), getItem(position).getCost());
         mHolder.tvCost.setText(cost);
+
+        //unique
+        if (getItem(position).is_unique()){
+            mHolder.tvUnique.setText(mContext.getString(R.string.unique));
+        }
         return convertView;
     }
 
     class ViewHolder {
-        TextView tvCardName, tvRarity, tvVersion, tvType, tvRule, tvRequirement, tvCost;
+        TextView tvCardName, tvRarity, tvVersion, tvType, tvRule, tvRequirement, tvCost, tvUnique;
         ImageView ivPic, ivRarity;
     }
 }
