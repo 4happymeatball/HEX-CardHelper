@@ -17,14 +17,14 @@ public class CardQueryActivity extends AppCompatActivity {
     private CheckBox[] cbRarity = new CheckBox[6], cbType = new CheckBox[6],
             cbColor = new CheckBox[6], cbCost = new CheckBox[8];
 
-    private int[] id = new int[]{R.id.cb_common, R.id.cb_uncommon, R.id.cb_rare, R.id.cb_mythic_rare,
+    private int[] id = {R.id.cb_common, R.id.cb_uncommon, R.id.cb_rare, R.id.cb_mythic_rare,
             R.id.cb_another_art, R.id.cb_token, R.id.cb_resource, R.id.cb_troop, R.id.cb_artifact,
             R.id.cb_constant, R.id.cb_action, R.id.cb_quick, R.id.cb_non_color, R.id.cb_white_color,
             R.id.cb_blue_color, R.id.cb_black_color, R.id.cb_red_color, R.id.cb_green_color,
             R.id.cb_cost_0, R.id.cb_cost_1, R.id.cb_cost_2, R.id.cb_cost_3, R.id.cb_cost_4,
             R.id.cb_cost_5, R.id.cb_cost_6, R.id.cb_cost_7_and_more};
 
-    private String[] arg = new String[]{"rarity = 'C'", "rarity = 'UC'", "rarity = 'R'", "rarity = 'MR'",
+    private String[] arg = {"rarity = 'C'", "rarity = 'UC'", "rarity = 'R'", "rarity = 'MR'",
             "rarity = 'AA'", "rarity = 'TOKEN'", "type LIKE '%资源%'", "type LIKE '%部队%'", "type LIKE '%造物%'",
             "type LIKE '%恒久物%'", "type LIKE '%战术%'", "type LIKE '%快速%'", "color = ''", "color LIKE '%W%'",
             "color LIKE '%U%'", "color LIKE '%B%'", "color LIKE '%R%'", "color LIKE '%G%'",
