@@ -6,6 +6,6 @@
     tools:context="net.spinel.hexcards.activities.DeckListActivity">
 
     <include
-        android:id="@+id/ri_title"
+        android:id="@+id/rl_top"
         layout="@layout/title_base" />
 </RelativeLayout>
