@@ -108,6 +108,7 @@ public class DBHelper {
             if (cursor.moveToFirst()) {
                 do {
                     Deck deck = new Deck(
+                            String.valueOf(cursor.getInt(cursor.getColumnIndex("id"))),
                             cursor.getString(cursor.getColumnIndex("name")),
                             cursor.getString(cursor.getColumnIndex("tag")),
                             cursor.getString(cursor.getColumnIndex("description")),
@@ -148,6 +149,25 @@ public class DBHelper {
         values.put("sidedeck", convertToByte(deck.getSideDeck()));
 
         database.insert("table_decklist", null, values);
+    }
+
+    public void updateDeckData(Deck deck) {
+        if (database == null) {
+            openDatabaseConnection();
+        }
+
+        ContentValues values = new ContentValues();
+        values.put("name", deck.getName());
+        values.put("tag", deck.getTag());
+        values.put("description", deck.getDesc());
+        values.put("hero", deck.getHero());
+        values.put("color", deck.getColor());
+        values.put("lands", convertToByte(deck.getLands()));
+        values.put("creatures", convertToByte(deck.getCreatures()));
+        values.put("others", convertToByte(deck.getOthers()));
+        values.put("sidedeck", convertToByte(deck.getSideDeck()));
+
+        database.update("table_decklist", values, "id = ?", new String[]{deck.getId()});
     }
 
     private List<Integer> convertToList(byte[] data) {

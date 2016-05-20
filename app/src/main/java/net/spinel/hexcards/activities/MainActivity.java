@@ -3,15 +3,10 @@ package net.spinel.hexcards.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
 import net.spinel.hexcards.R;
-import net.spinel.hexcards.models.Deck;
-import net.spinel.hexcards.utils.DBHelper;
-
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,21 +17,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick(View view) {
+        Intent intent = null;
         switch (view.getId()) {
             case R.id.iv_card_query:
-                startActivity(new Intent(this, CardQueryActivity.class));
+                intent = new Intent(this, CardQueryActivity.class);
                 break;
             case R.id.iv_deck_build:
-                List<Deck> list = DBHelper.getInstance().queryDecks("SELECT * FROM table_decklist");
-                for (Deck deck :
-                        list) {
-                    Log.i("tasfkjfbkj", deck.toString());
-                }
+                intent = new Intent(this, DeckListActivity.class);
                 break;
             case R.id.iv_draft_pick:
             case R.id.iv_card_diy:
                 Toast.makeText(MainActivity.this, "progress", Toast.LENGTH_SHORT).show();
                 break;
+        }
+        if (intent != null) {
+            startActivity(intent);
         }
     }
 

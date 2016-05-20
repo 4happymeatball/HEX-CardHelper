@@ -7,15 +7,16 @@ import java.util.List;
  * Created by Spinel on 16/5/19.
  */
 public class Deck implements Serializable {
-    private String name, tag, desc, hero, color;
+    private String id, name, tag, desc, hero, color;
     private int mainDeckCount, sideDeckCount;
     private List<Integer> lands, creatures, others, sideDeck;
 
     public Deck() {
     }
 
-    public Deck(String name, String tag, String desc, String hero, String color, List<Integer> lands,
+    public Deck(String id, String name, String tag, String desc, String hero, String color, List<Integer> lands,
                 List<Integer> creatures, List<Integer> others, List<Integer> sideDeck) {
+        this.id = id;
         this.name = name;
         this.tag = tag;
         this.desc = desc;
@@ -25,6 +26,14 @@ public class Deck implements Serializable {
         this.creatures = creatures;
         this.others = others;
         this.sideDeck = sideDeck;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -110,10 +119,12 @@ public class Deck implements Serializable {
     @Override
     public String toString() {
         return "Deck{" +
-                "name='" + name + '\'' +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
                 ", tag='" + tag + '\'' +
                 ", desc='" + desc + '\'' +
                 ", hero='" + hero + '\'' +
+                ", color='" + color + '\'' +
                 ", mainDeckCount=" + mainDeckCount +
                 ", sideDeckCount=" + sideDeckCount +
                 ", lands=" + lands +
