@@ -15,8 +15,9 @@ import net.spinel.hexcards.utils.DBManager;
  * Created by Spinel on 16/5/11.
  */
 public class HEXApplication extends Application {
-    public static final int ALPHA_COUNT = 394;
-    public static final int BETA_COUNT = 295;
+    public static final int SET1_COUNT = 394;
+    public static final int SET2_COUNT = 280;
+    public static final int SET3_COUNT = 274;
 
     @Override
     public void onCreate() {

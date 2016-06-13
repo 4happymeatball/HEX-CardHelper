@@ -29,9 +29,9 @@ public class CardDisplayActivity extends AppCompatActivity {
         //card_name
         tvCardName.setText(card.getName());
 
-        //card_name_en
-        String cardNameEN = card.getName_en();
-        tvCardNameEN.setText(cardNameEN.isEmpty() ? "-" : cardNameEN);
+//        card_name_en
+//        String cardNameEN = card.getName_en();
+//        tvCardNameEN.setText(cardNameEN.isEmpty() ? "-" : cardNameEN);
 
         //rarity
         String rarity;
@@ -65,11 +65,28 @@ public class CardDisplayActivity extends AppCompatActivity {
         tvRarity.setText(rarity);
 
         //version
-        String version = card.getVersion().equals("alpha") ?
-                this.getString(R.string.alpha) : this.getString(R.string.beta);
-        int totalCount = card.getVersion().equals("alpha") ?
-                HEXApplication.ALPHA_COUNT : HEXApplication.BETA_COUNT;
-        tvVersion.setText(String.format(this.getString(R.string.version), version, card.getCard_no(), totalCount));
+        int version = card.getVersion();
+        String version_fact;
+        int totalCount;
+        switch (version) {
+            case 1:
+                version_fact = this.getString(R.string.set1);
+                totalCount = HEXApplication.SET1_COUNT;
+                break;
+            case 2:
+                version_fact = this.getString(R.string.set2);
+                totalCount = HEXApplication.SET2_COUNT;
+                break;
+            case 3:
+                version_fact = this.getString(R.string.set3);
+                totalCount = HEXApplication.SET3_COUNT;
+                break;
+            default:
+                version_fact = "";
+                totalCount = 0;
+                break;
+        }
+        tvVersion.setText(String.format(this.getString(R.string.version), version_fact, card.getCard_no(), totalCount));
 
         //rule
         tvRule.setText(card.getRule());

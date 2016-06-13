@@ -8,11 +8,10 @@ import java.io.Serializable;
  */
 public class Card implements Serializable {
     private int id;
-    private String version;
+    private int version;
     private int card_no;
     private String color;
     private String name;
-    private String name_en;
     private int cost;
     private String requirement;
     private int power;
@@ -30,7 +29,7 @@ public class Card implements Serializable {
     public Card() {
     }
 
-    public Card(int id, String version, int card_no, String color, String name, String name_en, int cost,
+    public Card(int id, int version, int card_no, String color, String name, int cost,
                 String requirement, int power, int defense, boolean is_unique, String type,
                 String subtype, String rarity, String camp, String rule, String description, String img_url) {
         this.id = id;
@@ -38,7 +37,6 @@ public class Card implements Serializable {
         this.card_no = card_no;
         this.color = color;
         this.name = name;
-        this.name_en = name_en;
         this.cost = cost;
         this.requirement = requirement;
         this.power = power;
@@ -61,11 +59,11 @@ public class Card implements Serializable {
         this.id = id;
     }
 
-    public String getVersion() {
+    public int getVersion() {
         return version;
     }
 
-    public void setVersion(String version) {
+    public void setVersion(int version) {
         this.version = version;
     }
 
@@ -91,14 +89,6 @@ public class Card implements Serializable {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getName_en() {
-        return name_en;
-    }
-
-    public void setName_en(String name_en) {
-        this.name_en = name_en;
     }
 
     public int getCost() {
@@ -205,7 +195,6 @@ public class Card implements Serializable {
                 ", card_no=" + card_no +
                 ", color='" + color + '\'' +
                 ", name='" + name + '\'' +
-                ", name_en='" + name_en + '\'' +
                 ", cost=" + cost +
                 ", requirement='" + requirement + '\'' +
                 ", power=" + power +

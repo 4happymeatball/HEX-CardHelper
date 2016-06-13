@@ -106,8 +106,23 @@ public class CardListAdapter extends BaseAdapter {
         mHolder.tvRarity.setText(rarity);
 
         //version
-        mHolder.tvVersion.setText(getItem(position).getVersion().equals("alpha") ?
-                mContext.getString(R.string.alpha) : mContext.getString(R.string.beta));
+        int version = getItem(position).getVersion();
+        String version_fact;
+        switch (version) {
+            case 1:
+                version_fact = mContext.getString(R.string.set1);
+                break;
+            case 2:
+                version_fact = mContext.getString(R.string.set2);
+                break;
+            case 3:
+                version_fact = mContext.getString(R.string.set3);
+                break;
+            default:
+                version_fact = "";
+                break;
+        }
+        mHolder.tvVersion.setText(version_fact);
 
         //rule
         mHolder.tvRule.setText(getItem(position).getRule());
@@ -130,7 +145,7 @@ public class CardListAdapter extends BaseAdapter {
         mHolder.tvCost.setText(cost);
 
         //unique
-        if (getItem(position).is_unique()){
+        if (getItem(position).is_unique()) {
             mHolder.tvUnique.setText(mContext.getString(R.string.unique));
         }
         return convertView;

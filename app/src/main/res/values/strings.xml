@@ -42,4 +42,7 @@
     <string name="count">共查找到%1d张相关卡片</string>
     <string name="unique">唯一</string>
     <string name="pow_def">力量%1$d&#160;/&#160;防御%2$d</string>
+    <string name="set1">第一版</string>
+    <string name="set2">第二版</string>
+    <string name="set3">第三版</string>
 </resources>
