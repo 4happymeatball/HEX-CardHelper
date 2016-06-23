@@ -45,4 +45,6 @@
     <string name="set1">第一版</string>
     <string name="set2">第二版</string>
     <string name="set3">第三版</string>
+    <string name="card_list">结果列表</string>
+    <string name="card_info">卡牌详情</string>
 </resources>

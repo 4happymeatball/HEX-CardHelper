@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -70,6 +71,8 @@ public class CardListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_card_list);
 
+        ((TextView) findViewById(R.id.tv_title)).setText(this.getString(R.string.card_list));
+        findViewById(R.id.iv_function).setVisibility(View.GONE);
         initView();
 
         sqlString = getIntent().getStringExtra("sql");
@@ -127,5 +130,12 @@ public class CardListActivity extends AppCompatActivity {
             }
         });
         tvNum = (TextView) this.findViewById(R.id.tv_result_count);
+    }
+
+    public void onBack(View view){
+        this.finish();
+    }
+
+    public void onSubmit(View view) {
     }
 }

@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import net.spinel.hexcards.R;
 
@@ -35,6 +37,8 @@ public class CardQueryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_card_query);
 
+        ((TextView) findViewById(R.id.tv_title)).setText(this.getString(R.string.card_query));
+        ((ImageView) findViewById(R.id.iv_function)).setImageResource(R.drawable.selector_search);
         initView();
     }
 
@@ -130,6 +134,10 @@ public class CardQueryActivity extends AppCompatActivity {
             }
             cbCost[i] = (CheckBox) this.findViewById(id[i + 18]);
         }
+    }
+
+    public void onBack(View view) {
+        this.finish();
     }
 
     public void onSubmit(View view) {

@@ -2,6 +2,7 @@ package net.spinel.hexcards.activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -22,6 +23,8 @@ public class CardDisplayActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_card_display);
 
+        ((TextView) findViewById(R.id.tv_title)).setText(this.getString(R.string.card_info));
+        findViewById(R.id.iv_function).setVisibility(View.GONE);
         initView();
 
         Card card = (Card) getIntent().getSerializableExtra("card");
@@ -135,5 +138,12 @@ public class CardDisplayActivity extends AppCompatActivity {
         tvDescription = (TextView) this.findViewById(R.id.tv_description);
         ivPic = (ImageView) this.findViewById(R.id.iv_pic);
         ivRarity = (ImageView) this.findViewById(R.id.iv_rarity);
+    }
+
+    public void onBack(View view) {
+        this.finish();
+    }
+
+    public void onSubmit(View view) {
     }
 }
