@@ -17,20 +17,22 @@ import java.util.List;
 public class CardQueryActivity extends AppCompatActivity {
     private EditText etCardName, etCardRule, etSubType;
     private CheckBox[] cbRarity = new CheckBox[6], cbType = new CheckBox[6],
-            cbColor = new CheckBox[6], cbCost = new CheckBox[8];
+            cbColor = new CheckBox[6], cbCost = new CheckBox[8], cbSet = new CheckBox[3];
 
     private int[] id = {R.id.cb_common, R.id.cb_uncommon, R.id.cb_rare, R.id.cb_mythic_rare,
             R.id.cb_another_art, R.id.cb_token, R.id.cb_resource, R.id.cb_troop, R.id.cb_artifact,
             R.id.cb_constant, R.id.cb_action, R.id.cb_quick, R.id.cb_non_color, R.id.cb_white_color,
             R.id.cb_blue_color, R.id.cb_black_color, R.id.cb_red_color, R.id.cb_green_color,
             R.id.cb_cost_0, R.id.cb_cost_1, R.id.cb_cost_2, R.id.cb_cost_3, R.id.cb_cost_4,
-            R.id.cb_cost_5, R.id.cb_cost_6, R.id.cb_cost_7_and_more};
+            R.id.cb_cost_5, R.id.cb_cost_6, R.id.cb_cost_7_and_more, R.id.cb_set_1, R.id.cb_set_2,
+            R.id.cb_set_3};
 
     private String[] arg = {"rarity = 'C'", "rarity = 'UC'", "rarity = 'R'", "rarity = 'MR'",
-            "rarity = 'AA'", "rarity = 'TOKEN'", "type LIKE '%资源%'", "type LIKE '%部队%'", "type LIKE '%造物%'",
-            "type LIKE '%恒久物%'", "type LIKE '%战术%'", "type LIKE '%快速%'", "color = ''", "color LIKE '%W%'",
-            "color LIKE '%U%'", "color LIKE '%B%'", "color LIKE '%R%'", "color LIKE '%G%'",
-            "cost = 0", "cost = 1", "cost = 2", "cost = 3", "cost = 4", "cost = 5", "cost = 6", "cost >= 7"};
+            "rarity = 'AA'", "rarity = 'TOKEN'", "type LIKE '%资源%'", "type LIKE '%部队%'",
+            "type LIKE '%造物%'", "type LIKE '%恒久物%'", "type LIKE '%战术%'", "type LIKE '%快速%'",
+            "color = ''", "color LIKE '%W%'", "color LIKE '%U%'", "color LIKE '%B%'",
+            "color LIKE '%R%'", "color LIKE '%G%'", "cost = 0", "cost = 1", "cost = 2", "cost = 3",
+            "cost = 4", "cost = 5", "cost = 6", "cost >= 7", "[set] = 1", "[set] = 2", "[set] = 3"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,6 +106,14 @@ public class CardQueryActivity extends AppCompatActivity {
         }
         constructString(builder, temp);
 
+        //set
+        for (int i = 0; i < 3; i++) {
+            if (cbSet[i].isChecked()) {
+                temp.add(i + 26);
+            }
+        }
+        constructString(builder, temp);
+
         return builder.toString();
     }
 
@@ -127,6 +137,12 @@ public class CardQueryActivity extends AppCompatActivity {
         etSubType = (EditText) this.findViewById(R.id.et_subtype);
 
         for (int i = 0; i < 8; i++) {
+            if (i < 3) {
+                cbRarity[i] = (CheckBox) this.findViewById(id[i]);
+                cbType[i] = (CheckBox) this.findViewById(id[i + 6]);
+                cbColor[i] = (CheckBox) this.findViewById(id[i + 12]);
+                cbSet[i] = (CheckBox) this.findViewById(id[i + 26]);
+            }
             if (i < 6) {
                 cbRarity[i] = (CheckBox) this.findViewById(id[i]);
                 cbType[i] = (CheckBox) this.findViewById(id[i + 6]);

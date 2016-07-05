@@ -65,7 +65,7 @@ public class DBHelper {
                 do {
                     Card card = new Card(
                             cursor.getInt(cursor.getColumnIndex("id")),
-                            cursor.getInt(cursor.getColumnIndex("version")),
+                            cursor.getInt(cursor.getColumnIndex("set")),
                             cursor.getInt(cursor.getColumnIndex("card_no")),
                             cursor.getString(cursor.getColumnIndex("color")),
                             cursor.getString(cursor.getColumnIndex("name")),

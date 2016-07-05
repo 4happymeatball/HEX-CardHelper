@@ -28,7 +28,8 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.iv_draft_pick:
             case R.id.iv_card_diy:
-                Toast.makeText(MainActivity.this, "progress", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MainActivity.this, "progress", Toast.LENGTH_SHORT).show();
+                intent = new Intent(this, FTVActivity.class);
                 break;
         }
         if (intent != null) {

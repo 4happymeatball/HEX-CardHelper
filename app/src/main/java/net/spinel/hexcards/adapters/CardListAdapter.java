@@ -105,24 +105,24 @@ public class CardListAdapter extends BaseAdapter {
         mHolder.ivRarity.setImageResource(rarity_shape);
         mHolder.tvRarity.setText(rarity);
 
-        //version
-        int version = getItem(position).getVersion();
-        String version_fact;
-        switch (version) {
+        //set
+        int set = getItem(position).getSet();
+        String set_name;
+        switch (set) {
             case 1:
-                version_fact = mContext.getString(R.string.set1);
+                set_name = mContext.getString(R.string.set1);
                 break;
             case 2:
-                version_fact = mContext.getString(R.string.set2);
+                set_name = mContext.getString(R.string.set2);
                 break;
             case 3:
-                version_fact = mContext.getString(R.string.set3);
+                set_name = mContext.getString(R.string.set3);
                 break;
             default:
-                version_fact = "";
+                set_name = "";
                 break;
         }
-        mHolder.tvVersion.setText(version_fact);
+        mHolder.tvVersion.setText(set_name);
 
         //rule
         mHolder.tvRule.setText(getItem(position).getRule());

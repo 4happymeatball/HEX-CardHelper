@@ -8,7 +8,7 @@ import java.io.Serializable;
  */
 public class Card implements Serializable {
     private int id;
-    private int version;
+    private int set;
     private int card_no;
     private String color;
     private String name;
@@ -29,11 +29,11 @@ public class Card implements Serializable {
     public Card() {
     }
 
-    public Card(int id, int version, int card_no, String color, String name, int cost,
+    public Card(int id, int set, int card_no, String color, String name, int cost,
                 String requirement, int power, int defense, boolean is_unique, String type,
                 String subtype, String rarity, String camp, String rule, String description, String img_url) {
         this.id = id;
-        this.version = version;
+        this.set = set;
         this.card_no = card_no;
         this.color = color;
         this.name = name;
@@ -59,12 +59,12 @@ public class Card implements Serializable {
         this.id = id;
     }
 
-    public int getVersion() {
-        return version;
+    public int getSet() {
+        return set;
     }
 
-    public void setVersion(int version) {
-        this.version = version;
+    public void setSet(int set) {
+        this.set = set;
     }
 
     public int getCard_no() {
@@ -191,7 +191,7 @@ public class Card implements Serializable {
     public String toString() {
         return "Card{" +
                 "id=" + id +
-                ", version='" + version + '\'' +
+                ", set='" + set + '\'' +
                 ", card_no=" + card_no +
                 ", color='" + color + '\'' +
                 ", name='" + name + '\'' +

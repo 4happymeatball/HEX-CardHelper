@@ -67,29 +67,29 @@ public class CardDisplayActivity extends AppCompatActivity {
         ivRarity.setImageResource(rarity_shape);
         tvRarity.setText(rarity);
 
-        //version
-        int version = card.getVersion();
-        String version_fact;
+        //set
+        int set = card.getSet();
+        String set_name;
         int totalCount;
-        switch (version) {
+        switch (set) {
             case 1:
-                version_fact = this.getString(R.string.set1);
+                set_name = this.getString(R.string.set1);
                 totalCount = HEXApplication.SET1_COUNT;
                 break;
             case 2:
-                version_fact = this.getString(R.string.set2);
+                set_name = this.getString(R.string.set2);
                 totalCount = HEXApplication.SET2_COUNT;
                 break;
             case 3:
-                version_fact = this.getString(R.string.set3);
+                set_name = this.getString(R.string.set3);
                 totalCount = HEXApplication.SET3_COUNT;
                 break;
             default:
-                version_fact = "";
+                set_name = "";
                 totalCount = 0;
                 break;
         }
-        tvVersion.setText(String.format(this.getString(R.string.version), version_fact, card.getCard_no(), totalCount));
+        tvVersion.setText(String.format(this.getString(R.string.version), set_name, card.getCard_no(), totalCount));
 
         //rule
         tvRule.setText(card.getRule());
