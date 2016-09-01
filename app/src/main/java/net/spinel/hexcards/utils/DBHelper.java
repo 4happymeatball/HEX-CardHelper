@@ -69,6 +69,7 @@ public class DBHelper {
                             cursor.getInt(cursor.getColumnIndex("card_no")),
                             cursor.getString(cursor.getColumnIndex("color")),
                             cursor.getString(cursor.getColumnIndex("name")),
+                            cursor.getString(cursor.getColumnIndex("name_en")),
                             cursor.getInt(cursor.getColumnIndex("cost")),
                             cursor.getString(cursor.getColumnIndex("requirement")),
                             cursor.getInt(cursor.getColumnIndex("power")),

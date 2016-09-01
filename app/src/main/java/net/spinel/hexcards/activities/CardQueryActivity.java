@@ -53,9 +53,11 @@ public class CardQueryActivity extends AppCompatActivity {
         //card_name
         String cardName = etCardName.getText().toString().trim();
         if (!cardName.isEmpty()) {
-            builder.append(" AND name LIKE '%");
+            builder.append(" AND (name LIKE '%");
             builder.append(cardName);
-            builder.append("%'");
+            builder.append("%' OR name_en LIKE '%");
+            builder.append(cardName);
+            builder.append("%')");
         }
 
         //card_rule

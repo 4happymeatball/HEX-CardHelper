@@ -32,9 +32,9 @@ public class CardDisplayActivity extends AppCompatActivity {
         //card_name
         tvCardName.setText(card.getName());
 
-//        card_name_en
-//        String cardNameEN = card.getName_en();
-//        tvCardNameEN.setText(cardNameEN.isEmpty() ? "-" : cardNameEN);
+        //card_name_en
+        String cardNameEN = card.getName_en();
+        tvCardNameEN.setText(cardNameEN.isEmpty() ? "-" : cardNameEN);
 
         //rarity
         String rarity;
